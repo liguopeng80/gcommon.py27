@@ -1,0 +1,24 @@
+
+ucloud:
+  region: "cn-bj2"
+  project_id: "org-47653"
+  public_key: "JolSnW6U6MqJFmSofco"
+  private_key: "-"
+  test: "test"
+
+table:
+  - db_name: store
+    table_name: store_table
+  - db_name: order
+    table_name: order_table
+
+
+anchor: &anchor
+  data: test
+
+ref:
+  refdata: *anchor
+  <<: *anchor
+
+service:
+  name: $(service)
