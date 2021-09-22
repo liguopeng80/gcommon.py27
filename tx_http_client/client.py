@@ -11,7 +11,7 @@ from twisted.web.client import Agent, readBody
 from twisted.web.http_headers import Headers
 from twisted.web.iweb import IBodyProducer, IResponse
 
-from gcommon.utils.jsonobj import JsonObject
+from gcommon.utils.gjsonobj import JsonObject
 
 
 class StringProducer(object):
@@ -90,7 +90,7 @@ class HTTPClient(object):
 
 @inlineCallbacks
 def main():
-    from gcommon.utils.jsonobj import JsonObject
+    from gcommon.utils.gjsonobj import JsonObject
     client = HTTPClient(Agent(reactor))
     # resp = yield client.request('GET', 'http://localhost:8080/api/otap/hello')
     # body = yield resp.raw_content()
